@@ -19,7 +19,7 @@ const router = new VueRouter({
          mode: "history",
          routes: [
              {
-                 path: "/heatstrokes",
+                 path: "/",
                  name: "heatstroke.list",
                  component: HeatStrokeListComponent
              },
