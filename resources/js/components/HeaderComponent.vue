@@ -2,7 +2,7 @@
      <div class="container-fluid bg-dark mb-3">
          <div class="container">
              <nav class="navbar navbar-dark">
-                 <span class="navbar-brand mb-0 h1">MyRoom熱中症警報</span>
+                 <span class="navbar-brand mb-0 h1">MyRoom熱中症危険度</span>
                  <div>
                         <router-link v-bind:to="{name: 'heatstroke.list'}">
                             <button class="btn btn-success">更新</button>
