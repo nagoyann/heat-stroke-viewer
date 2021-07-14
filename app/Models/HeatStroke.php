@@ -18,9 +18,11 @@ class HeatStroke
         $values = $sheets->spreadsheets_values->get("1_vJysEBiO_sJld2oq7eV-tFAoqG2gEyyUqr4BAwaDRI", "A1:E100")->getValues();
      
         $modelArray = array();
-        for($i = 0;$i < count($values);$i++){
+        $modelCnt = min(count($values),10); #最大でも10個だけ表示
+
+        for($i = 0;$i < $modelCnt;$i++){
             $modelArray[$i] = new HeatStroke(); 
-            $modelArray[$i]->date = $values[$i][0];
+            $modelArray[$i]->date = date('Y年m月d日 H:i', strtotime($values[$i][0]));
             $modelArray[$i]->temp = $values[$i][1];
             $modelArray[$i]->wet = $values[$i][2];
             $modelArray[$i]->remarks = $values[$i][3];
